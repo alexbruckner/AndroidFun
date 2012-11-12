@@ -10,4 +10,5 @@ public interface Display {
 	void draw(Sprite... sprites);
 	int getDisplayWidth();
 	int getDisplayHeight();
+	boolean isRunning();
 }
