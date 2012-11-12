@@ -3,25 +3,24 @@ package com.bru.android.fun;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-
-import java.util.Random;
 
 public class MainActivity extends Activity {
 
 	MySurfaceView mySurfaceView;
 
-	/** Called when the activity is first created. */
+	/**
+	 * Called when the activity is first created.
+	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		mySurfaceView = new MySurfaceView(this);
 		setContentView(mySurfaceView);
+		onResume();
 	}
 
 	@Override
@@ -36,36 +35,58 @@ public class MainActivity extends Activity {
 		mySurfaceView.onPauseMySurfaceView();
 	}
 
-	class MySurfaceView extends SurfaceView implements Runnable{
+	class MySurfaceView extends SurfaceView implements Runnable, Display {
 
-		Thread thread = null;
-		SurfaceHolder surfaceHolder;
-		volatile boolean running = false;
-
-		private Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-		Random random;
-
-		volatile boolean touched = false;
-		volatile float touched_x, touched_y;
+		private Thread drawingThread;
+		private Thread gameThread;
+		private SurfaceHolder surfaceHolder;
+		private volatile boolean running;
+		private volatile int[] colors;
+		private Paint paint;
+		private int width;
+		private int height;
 
 		public MySurfaceView(Context context) {
 			super(context);
 			surfaceHolder = getHolder();
-			random = new Random();
+			paint = new Paint(Paint.ANTI_ALIAS_FLAG);
 		}
 
-		public void onResumeMySurfaceView(){
+		public void onResumeMySurfaceView() {
 			running = true;
-			thread = new Thread(this);
-			thread.start();
+			drawingThread = new Thread(this);
+			gameThread = new GameThread(this);
+			drawingThread.start();
+			gameThread.start();
 		}
 
-		public void onPauseMySurfaceView(){
+		public void onDraw(Canvas canvas) {
+			if (width == 0) {
+				width = canvas.getWidth();
+				height = canvas.getHeight();
+				assert (width > 0);
+				assert (height > 0);
+				colors = new int[width * height];
+			}
+			canvas.drawBitmap(colors, 0, width, 0, 0, width, height, true, paint);
+		}
+
+		public int getDisplayWidth(){
+			return width;
+		}
+
+		public int getDisplayHeight(){
+			return height;
+		}
+
+
+		public void onPauseMySurfaceView() {
 			boolean retry = true;
 			running = false;
-			while(retry){
+			while (retry) {
 				try {
-					thread.join();
+					drawingThread.join();
+					gameThread.join();
 					retry = false;
 				} catch (InterruptedException e) {
 					e.printStackTrace();
@@ -74,63 +95,49 @@ public class MainActivity extends Activity {
 		}
 
 		public void run() {
-			while(running){
-				if(surfaceHolder.getSurface().isValid()){
+			while (running) {
+				if (surfaceHolder.getSurface().isValid()) {
 					Canvas canvas = surfaceHolder.lockCanvas();
-					//... actual drawing on canvas
-
-					paint.setStyle(Paint.Style.STROKE);
-					paint.setStrokeWidth(3);
-
-					int w = canvas.getWidth();
-					int h = canvas.getHeight();
-					int x = random.nextInt(w-1);
-					int y = random.nextInt(h-1);
-					int r = random.nextInt(255);
-					int g = random.nextInt(255);
-					int b = random.nextInt(255);
-					paint.setColor(0xff000000 + (r << 16) + (g << 8) + b);
-					canvas.drawPoint(x, y, paint);
-
-					if(touched){
-						paint.setStrokeWidth(50);
-						paint.setColor(Color.BLACK);
-						canvas.drawPoint(touched_x, touched_y, paint);
+					if (canvas != null) {
+						onDraw(canvas);
 					}
-
 					surfaceHolder.unlockCanvasAndPost(canvas);
 				}
 			}
 		}
 
-		@Override
-		public boolean onTouchEvent(MotionEvent event) {
-
-			touched_x = event.getX();
-			touched_y = event.getY();
-
-			int action = event.getAction();
-			switch(action){
-				case MotionEvent.ACTION_DOWN:
-					touched = true;
-					break;
-				case MotionEvent.ACTION_MOVE:
-					touched = true;
-					break;
-				case MotionEvent.ACTION_UP:
-					touched = false;
-					break;
-				case MotionEvent.ACTION_CANCEL:
-					touched = false;
-					break;
-				case MotionEvent.ACTION_OUTSIDE:
-					touched = false;
-					break;
-				default:
-			}
-			return true; //processed
+		public void setPixel(int x, int y, int argb) {
+			colors[y * width + x] = argb;
 		}
 
+		public void draw(Sprite... sprites) {
+
+			try {
+				if (colors != null) {
+					for (Sprite sprite : sprites) {
+
+						int x = 0;
+						int y = 0;
+
+						for (int color : sprite.colors) {
+
+							int p_x = sprite.x + x;
+							int p_y = sprite.y + y;
+							setPixel(p_x, p_y, color);
+
+							x++;
+							if (x == sprite.width) {
+								x = 0;
+								y++;
+							}
+						}
+					}
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
 	}
 }
+
 
