@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e43881b-a829-4b8c-ab78-e452379431e2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/bru/android/fun/GameThread.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/bru/android/fun/MySurfaceView.java" />
-      <change type="DELETED" beforePath="C:\Users\Alex\IntelliJ_IDEA_Projects\AndroidFun\out\production\AndroidFun\com\bru\android\fun\MainActivity$MySurfaceView.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bru/android/fun/Display.java" afterPath="$PROJECT_DIR$/src/com/bru/android/fun/Display.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bru/android/fun/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/bru/android/fun/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bru/android/fun/GameThread.java" afterPath="$PROJECT_DIR$/src/com/bru/android/fun/GameThread.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bru/android/fun/MySurfaceView.java" afterPath="$PROJECT_DIR$/src/com/bru/android/fun/MySurfaceView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bru/android/fun/Sprite.java" afterPath="$PROJECT_DIR$/src/com/bru/android/fun/Sprite.java" />
     </list>
     <ignored path="AndroidFun.iws" />
@@ -68,16 +67,16 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/bru/android/fun/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="8" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
+            <state line="18" column="44" selection-start="420" selection-end="420" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MySurfaceView.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MySurfaceView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/bru/android/fun/MySurfaceView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="13" selection-start="291" selection-end="291" vertical-scroll-proportion="0.33153638">
+            <state line="95" column="0" selection-start="2002" selection-end="2002" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,10 +84,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameThread.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GameThread.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/bru/android/fun/GameThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
+            <state line="105" column="9" selection-start="2134" selection-end="2134" vertical-scroll-proportion="0.91374665">
               <folding />
             </state>
           </provider>
@@ -97,7 +96,7 @@
       <file leaf-file-name="Display.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/bru/android/fun/Display.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
+            <state line="13" column="0" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -106,7 +105,7 @@
       <file leaf-file-name="Sprite.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/bru/android/fun/Sprite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="28" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
+            <state line="6" column="38" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -127,9 +126,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/bru/android/fun/MainView.java" />
         <option value="$PROJECT_DIR$/src/com/bru/android/fun/Gamethread.java" />
-        <option value="$PROJECT_DIR$/src/com/bru/android/fun/Display.java" />
         <option value="$PROJECT_DIR$/src/com/bru/android/fun/MainActivity.java" />
         <option value="$PROJECT_DIR$/src/com/bru/android/fun/Sprite.java" />
+        <option value="$PROJECT_DIR$/src/com/bru/android/fun/Display.java" />
         <option value="$PROJECT_DIR$/src/com/bru/android/fun/MySurfaceView.java" />
         <option value="$PROJECT_DIR$/src/com/bru/android/fun/GameThread.java" />
       </list>
@@ -167,6 +166,30 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AndroidFun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AndroidFun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -205,17 +228,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -225,14 +237,13 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="403QVGA" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Android Application.AndroidFun">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -405,7 +416,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -415,8 +426,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32996634" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32996634" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -508,45 +519,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bru/android/fun/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="8" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
+        <state line="18" column="44" selection-start="420" selection-end="420" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bru/android/fun/Sprite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="28" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bru/android/fun/GameThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
+        <state line="6" column="38" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bru/android/fun/Display.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
+        <state line="13" column="0" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bru/android/fun/MySurfaceView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="291" selection-end="291" vertical-scroll-proportion="0.33153638">
+        <state line="95" column="0" selection-start="2002" selection-end="2002" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bru/android/fun/GameThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="9" selection-start="2134" selection-end="2134" vertical-scroll-proportion="0.91374665">
+          <folding />
         </state>
       </provider>
     </entry>

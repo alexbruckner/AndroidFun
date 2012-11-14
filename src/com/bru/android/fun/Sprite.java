@@ -14,6 +14,8 @@ public class Sprite {
 	public int width;
 	public int height;
 	public int[] colors;
+	public int v_x;
+	public int v_y;
 
 	public Sprite(int width, int height, int color){
 		this.width = width;
@@ -26,4 +28,8 @@ public class Sprite {
 		}
 	}
 
+	public void move() {
+		x = x + v_x;
+		y = y + v_y;
+	}
 }

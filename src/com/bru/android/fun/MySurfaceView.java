@@ -2,6 +2,7 @@ package com.bru.android.fun;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -48,15 +49,15 @@ public class MySurfaceView extends SurfaceView implements Runnable, Display {
 		canvas.drawBitmap(colors, 0, width, 0, 0, width, height, true, paint);
 	}
 
-	public int getDisplayWidth(){
+	public int getDisplayWidth() {
 		return width;
 	}
 
-	public int getDisplayHeight(){
+	public int getDisplayHeight() {
 		return height;
 	}
 
-	public boolean isRunning(){
+	public boolean isRunning() {
 		return running;
 	}
 
@@ -90,7 +91,16 @@ public class MySurfaceView extends SurfaceView implements Runnable, Display {
 		colors[y * width + x] = argb;
 	}
 
+
 	public void draw(Sprite... sprites) {
+		draw(false, sprites);
+	}
+
+	public void clear(Sprite... sprites) {
+	 	draw(true, sprites);
+	}
+
+	public void draw(boolean clear, Sprite... sprites) {
 
 		try {
 			if (colors != null) {
@@ -103,7 +113,7 @@ public class MySurfaceView extends SurfaceView implements Runnable, Display {
 
 						int p_x = sprite.x + x;
 						int p_y = sprite.y + y;
-						setPixel(p_x, p_y, color);
+						setPixel(p_x, p_y, clear ? Color.BLACK : color);
 
 						x++;
 						if (x == sprite.width) {
@@ -117,4 +127,9 @@ public class MySurfaceView extends SurfaceView implements Runnable, Display {
 			e.printStackTrace();
 		}
 	}
+
+	public int[] getColors() {
+		return colors;
+	}
+
 }

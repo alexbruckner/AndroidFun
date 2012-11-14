@@ -11,4 +11,7 @@ public interface Display {
 	int getDisplayWidth();
 	int getDisplayHeight();
 	boolean isRunning();
+	int[] getColors();
+
+	void clear(Sprite[] sprites);
 }
